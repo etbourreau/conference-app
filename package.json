@@ -1,0 +1,29 @@
+{
+  "name": "conference-app",
+  "version": "1.0.0",
+  "description": "Devfest conferences management",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etbourreau/conference-app.git"
+  },
+  "author": "etbourreau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/etbourreau/conference-app/issues"
+  },
+  "homepage": "https://github.com/etbourreau/conference-app#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
