@@ -1,0 +1,56 @@
+body{
+    padding-top: 5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+div.row.title{
+    margin: 0;
+    justify-content: center;
+}
+
+#main-view{
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+}
+
+#main-view ul#linkedList{
+    list-style: none;
+    padding: 0;
+}
+
+#main-view ul#linkedList li{
+    text-align: left;
+    width: 100%;
+    border: 1px solid #ddd;
+    transition: all 0.1s ease-in;
+}
+
+#main-view ul#linkedList li:hover{
+    background-color: #efefef;
+}
+
+#main-view ul#linkedList li a{
+    display: inline-block;
+    padding: 15px;
+    width: 100%;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #555;
+}
+
+#main-view ul#linkedList li a::after{
+    content: "";
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    border-right: 0.2em solid #888;
+    border-top: 0.2em solid #888;
+    transform: rotate(45deg);
+    float: right;
+}

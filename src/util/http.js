@@ -1,18 +1,13 @@
-function httpGet(theUrl)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}
-
-function httpGetAsync(theUrl, callback)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() { 
-        if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
-            callback(xmlHttp.responseText);
+export function httpGet(url, callback){
+    const req = new XMLHttpRequest();
+    req.open('GET', url, true);
+    req.onreadystatechange = () => {
+        if (req.readyState === 4) {
+            if(req.status === 200)
+                callback(JSON.parse(req.responseText)); // corps de la réponse
+            else
+                throw "Erreur pendant le chargement de la page";
+        }
     };
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-    xmlHttp.send(null);
+    req.send(null);
 }
