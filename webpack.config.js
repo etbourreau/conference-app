@@ -12,7 +12,8 @@ module.exports = {
         rules: [
             {test: /\.css$/, use: [{loader: 'style-loader'}, {loader: 'css-loader'}]},
             {test: /\.(html)$/, use: {loader: 'html-loader', options: {attrs: [':data-src']}}},
-            {test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader", query: {limit: '10000', name: '[name].[ext]', outputPath: 'fonts/'}}
+            {test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader", query: {limit: '10000', name: '[name].[ext]', outputPath: 'fonts/'}},
+            {test: /\.(png|jpg|jpeg)$/, loader: "url-loader", query: {limit: '10000', name: '[name].[ext]', outputPath: 'assets/'}}
         ]
     },
     plugins: [

@@ -6,9 +6,15 @@ body{
     color: rgba(255, 255, 255, 0.9);
 }
 
-div.row.title{
+.title{
     margin: 0;
+    text-align: center;
     justify-content: center;
+}
+			
+.title-left{
+    text-align: left;
+    justify-content: flex-start;
 }
 
 #main-view{
@@ -53,4 +59,46 @@ div.row.title{
     border-top: 0.2em solid #888;
     transform: rotate(45deg);
     float: right;
+}
+
+div.row.speakers{
+    margin-bottom: 10px;
+}
+
+div.row.speakers .speakerLink{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+}
+			
+div.row a.btn#mesNotes, div.row a.btn#saveBtn{
+    margin-top: 15px;
+    width: 100%;
+}
+
+div.note{
+    margin-top: 15px;
+}
+
+div.note textarea{
+    width: 100%;
+    min-height: 200px;
+}
+			
+#navbar-header{
+    white-space: nowrap;
+}
+
+a.navbar-brand#retour::before{
+    content: "";
+    margin-top: 7px;
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    border-left: 0.2em solid #888;
+    border-top: 0.2em solid #888;
+    transform: rotate(-45deg);
+    float: left;
 }

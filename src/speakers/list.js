@@ -5,6 +5,8 @@ export default class SpeakerList{
     render(){
         let content = "";
         let talk = new TalkService();
+        $("#navbar-header").empty();
+        $("#navbar-header").append(`<a class="navbar-brand" href="#speakers-list" id="navbar-label">Présentateurs</a>`);
         $("h1#title").empty();
         $("#linkedList").empty();
         talk.findAll("speakers")

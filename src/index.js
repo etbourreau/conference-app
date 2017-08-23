@@ -4,6 +4,8 @@ import Home from './home/layout';
 import SpeakersList from './speakers/list';
 import SpeakerDetails from './speakers/detail';
 import SessionsList from './sessions/list';
+import SessionDetails from './sessions/detail';
+import NoteSession from './sessions/note';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
@@ -26,9 +28,19 @@ var router = () => {
         layout.getSpeakerDetails();
         const speakerDetails = new SpeakerDetails();
         speakerDetails.render(idSpeaker);
+    } else if (location.hash.includes('#session-detail-')) {
+        const idSession = location.hash.split("-")[2];
+        layout.getSessionDetails();
+        const sessionDetails = new SessionDetails();
+        sessionDetails.render(idSession);
+    } else if (location.hash.includes('#note-session-')) {
+        const idSession = location.hash.split("-")[2];
+        layout.getNoteSession();
+        const noteSession = new NoteSession();
+        noteSession.render(idSession);
     } else {
         const home = new Home();
-        home.render("main-view");
+        home.render();
     }
 };
 

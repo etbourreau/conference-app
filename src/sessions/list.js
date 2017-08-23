@@ -5,6 +5,8 @@ export default class SessionsList{
     render(){
         let content = "";
         let talk = new TalkService();
+        $("#navbar-header").empty();
+        $("#navbar-header").append(`<a class="navbar-brand" href="#sessions-list" id="navbar-label">Sessions</a>`);
         $("h1#title").empty();
         $("#linkedList").empty();
         talk.findAll("sessions")
